@@ -30,25 +30,10 @@ public class MainActivity extends AppCompatActivity {
             int result = (int) (divider/divisor);
             int mod = (int) (divider % divisor);
 
-            int base = 10;
-            int maxExp = 0;
-
-            while (true) {
-               if (divider / Math.pow(10,maxExp) < 1) {
-                  break;
-               }
-               maxExp++;
-            }
-
-
-            for (int i = 0; i < ) {
-                break;
-                base = Math.pow(base,)
-            }
-
-
             txt1.setText(String.format("%d",result));
             txt2.setText(String.format("%d",mod));
+
+            txt3.setText(String.format("%d",));
 
         });
     }
