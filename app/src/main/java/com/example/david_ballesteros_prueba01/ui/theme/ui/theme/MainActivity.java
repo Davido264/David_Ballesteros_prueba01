@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.david_ballesteros_prueba01.R;
@@ -19,9 +20,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button btn = this.findViewById(R.id.button2);
         btn.setOnClickListener((view) -> {
-            Toast.makeText(this, " R.id.button", Toast.LENGTH_SHORT).show();
-            double divider = ( (EditText) this.findViewById(R.id.editTextNumber)).getText();
+            double divider = Double.parseDouble(((EditText) this.findViewById(R.id.editTextNumber)).getText().toString());
+            double divisor = Double.parseDouble(((EditText) this.findViewById(R.id.editTextNumber2)).getText().toString());
 
+            TextView txt1 = this.findViewById(R.id.textView6);
+            TextView txt2 = this.findViewById(R.id.textView7);
+            TextView txt3 = this.findViewById(R.id.textView8);
+
+            int result = (int) (divider/divisor);
+            int mod = (int) (divider % divisor);
+
+            int base = 10;
+            int maxExp = 0;
+
+            while (true) {
+               if (divider / Math.pow(10,maxExp) < 1) {
+                  break;
+               }
+               maxExp++;
+            }
+
+
+            for (int i = 0; i < ) {
+                break;
+                base = Math.pow(base,)
+            }
+
+
+            txt1.setText(String.format("%d",result));
+            txt2.setText(String.format("%d",mod));
 
         });
     }
