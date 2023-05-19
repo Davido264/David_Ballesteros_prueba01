@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
             txt1.setText(String.format("%d",result));
             txt2.setText(String.format("%d",mod));
-
-            txt3.setText(String.format("%d",));
-
         });
     }
 
